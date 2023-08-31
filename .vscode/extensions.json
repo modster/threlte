@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "cloudedcat.vscode-model-viewer"
+        "cloudedcat.vscode-model-viewer",
+        "csstools.postcss",
+        "bradlc.vscode-tailwindcss"
     ]
 }
