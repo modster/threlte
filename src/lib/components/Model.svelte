@@ -4,29 +4,29 @@ Command: npx @threlte/gltf@1.0.1 D:\Projects\threlte\static\models\model.glb --r
 -->
 
 <script>
-  import { Group } from 'three'
-  import { T, forwardEventHandlers } from '@threlte/core'
-  import { useGltf } from '@threlte/extras'
+	import { Group } from 'three';
+	import { T, forwardEventHandlers } from '@threlte/core';
+	import { useGltf } from '@threlte/extras';
 
-  export const ref = new Group()
+	export const ref = new Group();
 
-  const gltf = useGltf('/models/model.glb')
+	const gltf = useGltf('/models/model.glb');
 
-  const component = forwardEventHandlers()
+	const component = forwardEventHandlers();
 </script>
 
 <T is={ref} dispose={false} {...$$restProps} bind:this={$component}>
-  {#await gltf}
-    <slot name="fallback" />
-  {:then gltf}
-    <T.Mesh
-      geometry={gltf.nodes.WaterBottle.geometry}
-      material={gltf.materials.BottleMat}
-      rotation={[-Math.PI, 0, -Math.PI]}
-    />
-  {:catch error}
-    <slot name="error" {error} />
-  {/await}
+	{#await gltf}
+		<slot name="fallback" />
+	{:then gltf}
+		<T.Mesh
+			geometry={gltf.nodes.WaterBottle.geometry}
+			material={gltf.materials.BottleMat}
+			rotation={[-Math.PI, 0, -Math.PI]}
+		/>
+	{:catch error}
+		<slot name="error" {error} />
+	{/await}
 
-  <slot {ref} />
+	<slot {ref} />
 </T>

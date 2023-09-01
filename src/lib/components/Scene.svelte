@@ -1,8 +1,7 @@
 <script>
 	import { T } from '@threlte/core';
 	import { ContactShadows, Float, Grid, OrbitControls } from '@threlte/extras';
-	import Model from './Model.svelte'
-
+	import Model from './Model.svelte';
 </script>
 
 <T.PerspectiveCamera makeDefault position={[-5, 5, 5]} fov={25}>
@@ -24,6 +23,5 @@
 <ContactShadows scale={10} blur={2} far={2.5} opacity={0.5} />
 
 <Float floatIntensity={1} floatingRange={[0, 1]}>
-	<Model scale={5}/>
-
+	<Model scale={5} />
 </Float>

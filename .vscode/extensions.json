@@ -1,7 +1,7 @@
 {
-    "recommendations": [
-        "cloudedcat.vscode-model-viewer",
-        "csstools.postcss",
-        "bradlc.vscode-tailwindcss"
-    ]
+	"recommendations": [
+		"cloudedcat.vscode-model-viewer",
+		"csstools.postcss",
+		"bradlc.vscode-tailwindcss"
+	]
 }
